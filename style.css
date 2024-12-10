@@ -1,0 +1,188 @@
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card-item {
+  position: relative;
+  display: block;
+  height: 300px;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #f0f0f0; 
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-item:hover {
+  transform: scale(1.05); 
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--surface-color);
+  padding: 1em;
+  border-radius: 0 0 calc(var(--curve) * 1px) calc(var(--curve) * 1px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.card-item:hover .card__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card__header-text {
+  margin-bottom: 1em;
+}
+
+.card__title {
+  font-size: 1.2em;
+  margin: 0;
+  color: #6A515E;
+}
+
+.card-name-input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.send-pdf-btn {
+  display: inline-block;
+  background-color: #6A515E;
+  color: #fff;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-pdf-btn:hover {
+  background-color: #9A7C85;
+}
+
+.send-pdf-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.card-item[style*="display: none"] {
+  pointer-events: none;
+}
+.card__descr
+{
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  position: absolute;
+  bottom:123px;
+  left:120px;
+  font-weight: 600;
+  font-size: 15px;
+  background: #f0f0f0;
+  width:100%;
+  display: inline-block;
+  padding:7px;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+
+.cursor{
+ 
+
+  font-size: 40px; 
+  font-family: Arial, Helvetica, sans-serif; 
+  background: linear-gradient(to right, #f32170, 
+          #ff6b08, #cf23cf, #eedd44); 
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text; 
+  top: 29px;
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+  typewriter 5s steps(50) 1s 3 normal both, 
+  blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
